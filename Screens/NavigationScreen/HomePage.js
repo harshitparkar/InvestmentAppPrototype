@@ -15,16 +15,14 @@ import Shares from './Sections/Shares';
 
 export default function HomeScreen({navigation}) {
   return (
-    <SafeAreaView style={styles.mainContainer}>
-      <ScrollView>
-        <Header NavigateTo={() => navigation.openDrawer()} />
-        <Amount AmountNumber={'109 987 973'} />
-        <View style={styles.categoryContainer}>
-          <Products />
-          <Shares />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+    <ScrollView contentContainerStyle={styles.mainContainer}>
+      <Header NavigateTo={() => navigation.openDrawer()} />
+      <Amount AmountNumber={'109 987 973'} />
+      <View style={styles.categoryContainer}>
+        <Products />
+        <Shares />
+      </View>
+    </ScrollView>
   );
 }
 
