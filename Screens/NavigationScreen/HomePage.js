@@ -7,6 +7,7 @@ import {
   View,
   Dimensions,
 } from 'react-native';
+import {ScrollView} from 'react-native-gesture-handler';
 import Amount from './components/amount';
 import Header from './components/header';
 import Products from './Sections/Products';
@@ -15,12 +16,14 @@ import Shares from './Sections/Shares';
 export default function HomeScreen({navigation}) {
   return (
     <SafeAreaView style={styles.mainContainer}>
-      <Header NavigateTo={() => navigation.openDrawer()} />
-      <Amount AmountNumber={'109 987 973'} />
-      <View style={styles.categoryContainer}>
-        <Products />
-        <Shares />
-      </View>
+      <ScrollView>
+        <Header NavigateTo={() => navigation.openDrawer()} />
+        <Amount AmountNumber={'109 987 973'} />
+        <View style={styles.categoryContainer}>
+          <Products />
+          <Shares />
+        </View>
+      </ScrollView>
     </SafeAreaView>
   );
 }
