@@ -7,13 +7,12 @@ import {
   View,
   Dimensions,
 } from 'react-native';
-import {DebugInstructions} from 'react-native/Libraries/NewAppScreen';
 import Amount from './components/amount';
 import Header from './components/header';
 import Products from './Sections/Products';
 import Shares from './Sections/Shares';
 
-export default function NavigationScreen1({navigation}) {
+export default function HomeScreen({navigation}) {
   return (
     <SafeAreaView style={styles.mainContainer}>
       <Header NavigateTo={() => navigation.openDrawer()} />

@@ -16,10 +16,10 @@ export default function ProductsTiles(props) {
   return (
     <SafeAreaView>
       <View style={styles.mainContainer}>
-        <Text style={styles.titletext}>Basic Plan</Text>
-        <Text style={styles.pricetext}>$ 122 726</Text>
+        <Text style={styles.titletext}>{props.PlanName}</Text>
+        <Text style={styles.pricetext}>$ {props.Price}</Text>
         <View style={styles.iconsbuttonContainer}>
-          <FAIcon name="file-invoice-dollar" size={40} color="#6f8fdc" />
+          <FAIcon name={props.Icons} size={40} color="#6f8fdc" />
           <View style={styles.buttonsStyle}>
             <IoniconsIcon name="arrow-forward-circle" size={30} color="black" />
           </View>

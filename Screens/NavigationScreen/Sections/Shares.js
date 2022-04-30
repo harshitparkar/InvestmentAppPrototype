@@ -2,29 +2,18 @@ import React from 'react';
 import {
   SafeAreaView,
   StyleSheet,
-  Text,
-  Button,
   View,
   Dimensions,
-  ScrollView,
-  TouchableOpacity,
 } from 'react-native';
-import AntIcon from 'react-native-vector-icons/AntDesign';
-import FeatherIcon from 'react-native-vector-icons/Feather';
 import CategoryTitles from '../components/categoryTitles';
-import ProductsTiles from '../components/productTiles';
+import ShareTiles from '../components/shareTiles';
 
 export default function Shares(props) {
   return (
     <SafeAreaView>
       <View style={styles.mainContainer}>
         <CategoryTitles Title={'Shares of products'} />
-        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-          <ProductsTiles />
-          <ProductsTiles />
-          <ProductsTiles />
-          <ProductsTiles />
-        </ScrollView>
+        <ShareTiles/>
       </View>
     </SafeAreaView>
   );
